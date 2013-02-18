@@ -1,10 +1,10 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/htc/dlx/BoardConfigVendor.mk
+-include vendor/htc/dlxj/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := dlx
+TARGET_BOOTLOADER_BOARD_NAME := dlxj
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
@@ -23,7 +23,7 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 
-BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=dlx user_debug=31
+BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=dlxj user_debug=31
 BOARD_KERNEL_BASE :=  0x80600000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81a08000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -34,7 +34,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/htc/dlx/kernAl
+TARGET_PREBUILT_KERNEL := device/htc/dlxj/kernAl
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
@@ -45,7 +45,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Recovery: set depending on recovery being built for. (CWM or TWRP)
 #           both init scripts can be found in the recovery folder
-TARGET_RECOVERY_INITRC := device/htc/dlx/recovery/init-twrp.rc
+TARGET_RECOVERY_INITRC := device/htc/dlxj/recovery/init-twrp.rc
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 800x1280
@@ -54,5 +54,10 @@ RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+
 TW_NO_USB_STORAGE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true

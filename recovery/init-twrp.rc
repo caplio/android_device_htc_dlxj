@@ -6,7 +6,7 @@ on init
     export LD_LIBRARY_PATH .:/sbin
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
-    export EXTERNAL_STORAGE /sdcard
+    export EXTERNAL_STORAGE /external_sd
 
     symlink /system/etc /etc
     symlink /sbin/busybox /sbin/sh
@@ -21,6 +21,7 @@ on init
     mkdir /system
     mkdir /data
     mkdir /cache
+    mkdir /external_sd
     mount /tmp /tmp tmpfs
 
 on boot

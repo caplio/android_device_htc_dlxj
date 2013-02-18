@@ -1,3 +1,3 @@
-ifneq ($(filter dlx,$(TARGET_DEVICE)),)
+ifneq ($(filter dlxj,$(TARGET_DEVICE)),)
     include $(all-subdir-makefiles)
 endif
