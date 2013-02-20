@@ -22,7 +22,11 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
     device/htc/dlxj/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging
 
+PRODUCT_COPY_FILES += \
+    device/htc/dlxj/ramdisk/ueventd.target.rc:recovery/root/ueventd.target.rc \
+    device/htc/dlxj/ramdisk/ueventd.rc:recovery/root/ueventd.rc
+
 #$(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := htc_dlxj
+PRODUCT_NAME := HTL21
 PRODUCT_BRAND := HTC
