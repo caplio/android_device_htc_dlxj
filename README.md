@@ -2,14 +2,13 @@
 
 1.CMのダウンロード
 
-　$ repo init -u git://github.com/CyanogenMod/android.git -b ics
-　※-b jearrybean で作成出来るのがベスト
+　$ repo init -u git://github.com/CyanogenMod/android.git -b jearrybean<BR>
 　$ repo sync
 
 2.デバイスファイルの用意
 
-　https://github.com/caplio/android_device_htc_dlxj.git<BR>を
-　git cloneしてdevice/htc/dlxj として配置。
+　https://github.com/caplio/android_device_htc_dlxj.git<BR>
+　をgit cloneしてdevice/htc/dlxj として配置。
 
 3.TWRPをコピー
 
