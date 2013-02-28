@@ -31,6 +31,14 @@ on boot
     domainname localdomain
 
     class_start default
+	
+    #  Temp disable 3 cpus to prevent heat for DLX
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    #write /sys/devices/system/cpu/cpu3/online 0
+    chmod 444 /sys/devices/system/cpu/cpu1/online
+    chmod 444 /sys/devices/system/cpu/cpu2/online
+    #chmod 444 /sys/devices/system/cpu/cpu3/online
 
 service ueventd /sbin/ueventd
     critical
