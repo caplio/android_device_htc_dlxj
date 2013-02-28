@@ -28,3 +28,7 @@ X. cleanは
 
    $ make clobber
 
+-----------------------------------
+for twrp 1080p theme.
+$ cd bootable/recovery/gui/devices/
+$ tar zxvf 1080x1920.tgz ./
